@@ -38,6 +38,6 @@ app.get('/profile/:id', handleProfile(db));
 app.put('/image', handleImage(db));
 app.post('/imageurl', handleApiCall);
 
-app.listen(3000, () => {
-	console.log("app is running, better catch it");
+app.listen(process.env.PORT || 3000, () => {
+	console.log(`app is running, better catch it on ${process.env.PORT}`);
 });
